@@ -119,7 +119,7 @@ def canminorbas():
 
     if canr < 10:
         minor()
-        ""
+        
     if manab < 10:
         keyboard_controller.press('2')
         time.sleep(0.01)
