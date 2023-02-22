@@ -5,7 +5,6 @@ import ctypes
 import pyautogui
 import keyboard as kb
 from colorama import Fore
-
 mouse_controller = mouse.Controller()
 keyboard_controller = keyboard.Controller()
 
@@ -75,6 +74,11 @@ def on_click(x, y, button, pressed):
         minor()
 
 
+
+    
+
+
+
 def on_press(key):
     skill(key)
 
@@ -119,7 +123,6 @@ def canminorbas():
 
     if canr < 10:
         minor()
-        
     if manab < 10:
         keyboard_controller.press('2')
         time.sleep(0.01)
@@ -156,14 +159,15 @@ bilgilendirme()
 
 while True:
     if caps_lock_state() == 1:
-        print(Fore.GREEN + "Bot Aktif...", end="\r")
+        print(Fore.GREEN+"Bot Aktif...", end="\r")
         if secim:
             canminorbas()
         else:
             pass
     else:
-        print(Fore.RED + "Bot Pasif...", end="\r")
+        print(Fore.RED+"Bot Pasif...", end="\r")
         time.sleep(1)
+
 
 listener_mouse.join()
 listener_keyboard.join()
